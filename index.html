@@ -1,0 +1,351 @@
+// ======================
+// CONFIGURAÇÃO DO QUIZ
+// ======================
+
+// Escolha a dificuldade:
+// "facil", "medio", "dificil", "impossivel"
+let dificuldade = "facil";
+
+let perguntasFacil = [
+  {
+    pergunta: "Qual prática ajuda a manter a saúde do solo?",
+    opcoes: ["Monocultura", "Rotação de culturas", "Queimadas", "Uso excessivo de agrotóxicos"],
+    resposta: 1
+  },
+  {
+    pergunta: "O que é agricultura de precisão?",
+    opcoes: ["Uso de tecnologia para otimizar recursos", "Plantio manual", "Uso de sementes transgênicas", "Desmatamento controlado"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual recurso é essencial para a agricultura?",
+    opcoes: ["Água", "Asfalto", "Concreto", "Plástico"],
+    resposta: 0
+  },
+  {
+    pergunta: "O que é compostagem?",
+    opcoes: ["Produção de adubo orgânico", "Queima de lixo", "Uso de pesticidas", "Irrigação"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual destes é um cereal?",
+    opcoes: ["Milho", "Tomate", "Batata", "Cenoura"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual inseto auxilia na polinização?",
+    opcoes: ["Abelha", "Barata", "Cupim", "Traça"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual energia é renovável?",
+    opcoes: ["Solar", "Carvão", "Petróleo", "Diesel"],
+    resposta: 0
+  },
+  {
+    pergunta: "O que reduz a erosão do solo?",
+    opcoes: ["Cobertura vegetal", "Queimadas", "Desmatamento", "Compactação"],
+    resposta: 0
+  }
+];
+
+let perguntasMedio = [
+  {
+    pergunta: "O que mede o pH do solo?",
+    opcoes: ["Acidez ou alcalinidade", "Temperatura", "Profundidade", "Umidade"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual nutriente é responsável pelo crescimento vegetativo?",
+    opcoes: ["Nitrogênio", "Potássio", "Cálcio", "Enxofre"],
+    resposta: 0
+  },
+  {
+    pergunta: "O plantio direto tem como principal objetivo:",
+    opcoes: ["Reduzir erosão", "Aumentar queimadas", "Eliminar irrigação", "Compactar o solo"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual equipamento utiliza GPS para agricultura de precisão?",
+    opcoes: ["Trator inteligente", "Enxada", "Foice", "Arado manual"],
+    resposta: 0
+  },
+  {
+    pergunta: "O fósforo auxilia principalmente em:",
+    opcoes: ["Desenvolvimento das raízes", "Cor das folhas", "Controle de pragas", "Irrigação"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual prática melhora a fertilidade do solo?",
+    opcoes: ["Adubação verde", "Queimadas", "Desmatamento", "Compactação"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual cultura fixa nitrogênio naturalmente?",
+    opcoes: ["Soja", "Milho", "Trigo", "Arroz"],
+    resposta: 0
+  },
+  {
+    pergunta: "O que é irrigação por gotejamento?",
+    opcoes: ["Água aplicada diretamente às raízes", "Inundação", "Chuva artificial", "Neblina"],
+    resposta: 0
+  },
+  {
+    pergunta: "O potássio ajuda principalmente em:",
+    opcoes: ["Resistência da planta", "Produção de plástico", "Queima da matéria orgânica", "Compactação"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual técnica reduz o uso de defensivos?",
+    opcoes: ["Manejo Integrado de Pragas", "Queimadas", "Desmatamento", "Monocultura"],
+    resposta: 0
+  }
+];
+
+let perguntasDificil = [
+  {
+    pergunta: "Qual bactéria fixa nitrogênio em leguminosas?",
+    opcoes: ["Rhizobium", "Salmonella", "Lactobacillus", "Streptococcus"],
+    resposta: 0
+  },
+  {
+    pergunta: "O que é geoestatística agrícola?",
+    opcoes: ["Análise espacial de dados", "Plantio manual", "Controle biológico", "Adubação"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual nutriente compõe a molécula da clorofila?",
+    opcoes: ["Magnésio", "Ferro", "Enxofre", "Potássio"],
+    resposta: 0
+  },
+  {
+    pergunta: "O que é lixiviação?",
+    opcoes: ["Perda de nutrientes pela água", "Adubação", "Polinização", "Fotossíntese"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual sensor é usado em drones agrícolas?",
+    opcoes: ["Multiespectral", "Sonoro", "Magnético", "Térmico simples"],
+    resposta: 0
+  },
+  {
+    pergunta: "O calcário é utilizado para:",
+    opcoes: ["Corrigir a acidez do solo", "Aumentar pragas", "Eliminar raízes", "Produzir sementes"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual processo converte matéria orgânica em nutrientes?",
+    opcoes: ["Mineralização", "Fotólise", "Oxidação", "Filtração"],
+    resposta: 0
+  },
+  {
+    pergunta: "O que é agricultura regenerativa?",
+    opcoes: ["Recuperação dos ecossistemas", "Desmatamento controlado", "Monocultura intensa", "Queimadas"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual equipamento gera mapas de produtividade?",
+    opcoes: ["Colhedora com sensores", "Enxada", "Arado", "Foice"],
+    resposta: 0
+  },
+  {
+    pergunta: "O que significa NDVI?",
+    opcoes: ["Índice de vegetação", "Índice pluviométrico", "Índice térmico", "Índice geológico"],
+    resposta: 0
+  },
+
+  // Adicione mais 10 perguntas semelhantes para completar 20
+];
+
+let perguntasImpossivel = [
+  {
+    pergunta: "Qual índice espectral é usado para medir vigor vegetativo?",
+    opcoes: ["NDVI", "SPI", "ETP", "GDD"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual processo converte amônia em nitrato?",
+    opcoes: ["Nitrificação", "Fixação", "Lixiviação", "Denitrificação"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual satélite é amplamente usado em monitoramento agrícola?",
+    opcoes: ["Sentinel-2", "Voyager 1", "Hubble", "ISS"],
+    resposta: 0
+  },
+  {
+    pergunta: "Qual tecnologia gera mapas de taxa variável?",
+    opcoes: ["SIG", "Planilha", "Calculadora", "Bússola"],
+    resposta: 0
+  },
+  {
+    pergunta: "O que é CTC do solo?",
+    opcoes: ["Capacidade de Troca de Cátions", "Controle de Temperatura do Campo", "Capacidade Total de Carbono", "Coeficiente Térmico"],
+    resposta: 0
+  }
+  // Adicione mais 20 perguntas avançadas para completar 25
+];
+
+// Define automaticamente o conjunto de perguntas
+let perguntas = perguntasFacil;
+
+if (dificuldade == "medio") perguntas = perguntasMedio;
+if (dificuldade == "dificil") perguntas = perguntasDificil;
+if (dificuldade == "impossivel") perguntas = perguntasImpossivel;
+
+// ======================
+// CÓDIGO ORIGINAL
+// ======================
+
+let indiceAtual = 0;
+let pontuacao = 0;
+let respostaSelecionada = -1;
+let feedback = '';
+
+let tempo = 20;
+
+if (dificuldade == "medio") tempo = 15;
+if (dificuldade == "dificil") tempo = 10;
+if (dificuldade == "impossivel") tempo = 5;
+
+function setup() {
+  createCanvas(800, 600);
+  textAlign(CENTER);
+
+  setInterval(() => {
+
+    if (indiceAtual < perguntas.length) {
+
+      tempo--;
+
+      if (tempo <= 0) {
+
+        feedback = "⏰ Tempo esgotado!";
+
+        setTimeout(() => {
+
+          indiceAtual++;
+
+          if (dificuldade == "facil") tempo = 20;
+          if (dificuldade == "medio") tempo = 15;
+          if (dificuldade == "dificil") tempo = 10;
+          if (dificuldade == "impossivel") tempo = 5;
+
+          feedback = '';
+
+        }, 1000);
+      }
+    }
+
+  }, 1000);
+}
+
+function draw() {
+  background(240);
+
+  if (indiceAtual < perguntas.length) {
+
+    let p = perguntas[indiceAtual];
+
+    textSize(24);
+    fill(0);
+    text(p.pergunta, width/2, 100);
+
+    fill(255, 0, 0);
+    textSize(20);
+    text("Tempo: " + tempo + "s", width/2, 130);
+
+    textSize(18);
+
+    for (let i = 0; i < p.opcoes.length; i++) {
+
+      let cor =
+        (respostaSelecionada == i)
+          ? (i == p.resposta ? '#8F8' : '#F88')
+          : '#DDD';
+
+      fill(cor);
+      rect(width/2 - 150, 150 + i*60, 300, 50, 10);
+
+      fill(0);
+      text(
+        `(${String.fromCharCode(65+i)}) ${p.opcoes[i]}`,
+        width/2,
+        180 + i*60
+      );
+    }
+
+    textSize(20);
+    fill(0);
+    text(feedback, width/2, 450);
+
+  } else {
+
+    textSize(32);
+    fill(0);
+    text("Fim do Quiz!", width/2, 200);
+
+    text(
+      `Sua pontuação: ${pontuacao}/${perguntas.length}`,
+      width/2,
+      260
+    );
+
+    text("Clique para jogar de novo", width/2, 320);
+  }
+}
+
+function mousePressed() {
+
+  if (indiceAtual < perguntas.length) {
+
+    let p = perguntas[indiceAtual];
+
+    for (let i = 0; i < p.opcoes.length; i++) {
+
+      if (
+        mouseX > width/2 - 150 &&
+        mouseX < width/2 + 150 &&
+        mouseY > 150 + i*60 &&
+        mouseY < 200 + i*60
+      ) {
+
+        respostaSelecionada = i;
+
+        if (i == p.resposta) {
+
+          pontuacao++;
+          feedback = "Correto! 🌱";
+
+        } else {
+
+          feedback = "Errado! Tente de novo.";
+        }
+
+        if (dificuldade == "facil") tempo = 20;
+        if (dificuldade == "medio") tempo = 15;
+        if (dificuldade == "dificil") tempo = 10;
+        if (dificuldade == "impossivel") tempo = 5;
+
+        setTimeout(() => {
+
+          indiceAtual++;
+          respostaSelecionada = -1;
+          feedback = '';
+
+        }, 1500);
+      }
+    }
+
+  } else {
+
+    indiceAtual = 0;
+    pontuacao = 0;
+    feedback = '';
+
+    if (dificuldade == "facil") tempo = 20;
+    if (dificuldade == "medio") tempo = 15;
+    if (dificuldade == "dificil") tempo = 10;
+    if (dificuldade == "impossivel") tempo = 5;
+  }
+}
